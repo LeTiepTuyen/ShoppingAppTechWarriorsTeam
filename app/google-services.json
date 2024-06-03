@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "716980623200",
+    "project_id": "shoppingapptechwarriorsteam",
+    "storage_bucket": "shoppingapptechwarriorsteam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716980623200:android:00372ddad946aa22857005",
+        "android_client_info": {
+          "package_name": "com.example.shoppingapptechwarriorsteam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzzqdTCCzawSlW8iu-E8iNtZlXS713sSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
