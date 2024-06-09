@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ShoppingAppTechWarriorsTeam</string>
+    <string name="rightAddress">The right address\nFor shopping\nAnyday</string>
+    <string name="quality">This is the best quality online shop\nFOR YOU</string>
 </resources>
