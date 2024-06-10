@@ -1,4 +1,4 @@
-package com.example.shoppingapptechwarriorsteam.activities.fragments.loginRegister
+package com.example.shoppingapptechwarriorsteam.fragments.loginRegister
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,9 +11,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.shoppingapptechwarriorsteam.R
 import com.example.shoppingapptechwarriorsteam.activities.ShoppingActivity
-import com.example.shoppingapptechwarriorsteam.activities.viewmodel.IntroductionViewModel
-import com.example.shoppingapptechwarriorsteam.activities.viewmodel.IntroductionViewModel.Companion.ACCOUNT_OPTIONS_FRAGMENT
-import com.example.shoppingapptechwarriorsteam.activities.viewmodel.IntroductionViewModel.Companion.SHOPPING_ACTIVITY
+import com.example.shoppingapptechwarriorsteam.viewmodel.IntroductionViewModel
+import com.example.shoppingapptechwarriorsteam.viewmodel.IntroductionViewModel.Companion.ACCOUNT_OPTIONS_FRAGMENT
+import com.example.shoppingapptechwarriorsteam.viewmodel.IntroductionViewModel.Companion.SHOPPING_ACTIVITY
 import com.example.shoppingapptechwarriorsteam.databinding.FragmentIntroductionBinding
 import dagger.hilt.android.AndroidEntryPoint
 

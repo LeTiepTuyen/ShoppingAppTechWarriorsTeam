@@ -1,4 +1,4 @@
-package com.example.shoppingapptechwarriorsteam.activities.fragments.loginRegister
+package com.example.shoppingapptechwarriorsteam.fragments.loginRegister
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,13 +12,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.shoppingapptechwarriorsteam.R
 import com.example.shoppingapptechwarriorsteam.activities.ShoppingActivity
-import com.example.shoppingapptechwarriorsteam.activities.dialog.setupBottomSheetDialog
-import com.example.shoppingapptechwarriorsteam.activities.util.Resource
-import com.example.shoppingapptechwarriorsteam.activities.viewmodel.LoginViewModel
+import com.example.shoppingapptechwarriorsteam.dialog.setupBottomSheetDialog
+import com.example.shoppingapptechwarriorsteam.util.Resource
+import com.example.shoppingapptechwarriorsteam.viewmodel.LoginViewModel
 import com.example.shoppingapptechwarriorsteam.databinding.FragmentLoginBinding
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class LoginFragment: Fragment(R.layout.fragment_login) {

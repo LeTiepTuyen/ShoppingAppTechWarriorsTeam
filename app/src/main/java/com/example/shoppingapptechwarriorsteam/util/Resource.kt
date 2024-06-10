@@ -1,4 +1,4 @@
-package com.example.shoppingapptechwarriorsteam.activities.util
+package com.example.shoppingapptechwarriorsteam.util
 
 sealed class Resource<T> (
     val data: T? = null,

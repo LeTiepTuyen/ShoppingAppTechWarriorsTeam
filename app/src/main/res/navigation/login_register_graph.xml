@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/introductionFragment"
-        android:name="com.example.shoppingapptechwarriorsteam.activities.fragments.loginRegister.IntroductionFragment"
+        android:name="com.example.shoppingapptechwarriorsteam.fragments.loginRegister.IntroductionFragment"
         android:label="IntroductionFragment"
         tools:layout="@layout/fragment_introduction">
 
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.shoppingapptechwarriorsteam.activities.fragments.loginRegister.RegisterFragment"
+        android:name="com.example.shoppingapptechwarriorsteam.fragments.loginRegister.RegisterFragment"
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_register">
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.shoppingapptechwarriorsteam.activities.fragments.loginRegister.LoginFragment"
+        android:name="com.example.shoppingapptechwarriorsteam.fragments.loginRegister.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/accountOptionsFragment"
-        android:name="com.example.shoppingapptechwarriorsteam.activities.fragments.loginRegister.AccountOptionsFragment"
+        android:name="com.example.shoppingapptechwarriorsteam.fragments.loginRegister.AccountOptionsFragment"
         android:label="AccountOptionsFragment"
         tools:layout="@layout/fragment_account_options">
         <action

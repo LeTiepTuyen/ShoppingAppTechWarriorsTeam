@@ -1,4 +1,4 @@
-package com.example.shoppingapptechwarriorsteam.activities.fragments.loginRegister
+package com.example.shoppingapptechwarriorsteam.fragments.loginRegister
 
 import android.os.Bundle
 import android.util.Log
@@ -10,10 +10,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.shoppingapptechwarriorsteam.R
-import com.example.shoppingapptechwarriorsteam.activities.data.User
-import com.example.shoppingapptechwarriorsteam.activities.util.RegisterValidation
-import com.example.shoppingapptechwarriorsteam.activities.util.Resource
-import com.example.shoppingapptechwarriorsteam.activities.viewmodel.RegisterViewModel
+import com.example.shoppingapptechwarriorsteam.data.User
+import com.example.shoppingapptechwarriorsteam.util.RegisterValidation
+import com.example.shoppingapptechwarriorsteam.util.Resource
+import com.example.shoppingapptechwarriorsteam.viewmodel.RegisterViewModel
 import com.example.shoppingapptechwarriorsteam.databinding.FragmentRegisterBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers

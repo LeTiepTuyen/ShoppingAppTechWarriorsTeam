@@ -1,4 +1,4 @@
-package com.example.shoppingapptechwarriorsteam.activities.util
+package com.example.shoppingapptechwarriorsteam.util
 
 import android.util.Patterns
 

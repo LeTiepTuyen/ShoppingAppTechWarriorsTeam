@@ -1,10 +1,9 @@
-package com.example.shoppingapptechwarriorsteam.activities.di
+package com.example.shoppingapptechwarriorsteam.di
 
 import android.app.Application
-import com.example.shoppingapptechwarriorsteam.activities.util.Constants.INTRODUCTION_SP
+import com.example.shoppingapptechwarriorsteam.util.Constants.INTRODUCTION_SP
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import dagger.Module
 import dagger.Provides

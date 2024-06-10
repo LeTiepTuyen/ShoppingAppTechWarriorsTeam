@@ -1,15 +1,14 @@
-package com.example.shoppingapptechwarriorsteam.activities.viewmodel
+package com.example.shoppingapptechwarriorsteam.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.example.shoppingapptechwarriorsteam.activities.data.User
-import com.example.shoppingapptechwarriorsteam.activities.util.Constants.USER_COLLECTION
-import com.example.shoppingapptechwarriorsteam.activities.util.RegisterFieldsState
-import com.example.shoppingapptechwarriorsteam.activities.util.RegisterValidation
-import com.example.shoppingapptechwarriorsteam.activities.util.Resource
-import com.example.shoppingapptechwarriorsteam.activities.util.validateEmail
-import com.example.shoppingapptechwarriorsteam.activities.util.validatePassword
+import com.example.shoppingapptechwarriorsteam.data.User
+import com.example.shoppingapptechwarriorsteam.util.Constants.USER_COLLECTION
+import com.example.shoppingapptechwarriorsteam.util.RegisterFieldsState
+import com.example.shoppingapptechwarriorsteam.util.RegisterValidation
+import com.example.shoppingapptechwarriorsteam.util.Resource
+import com.example.shoppingapptechwarriorsteam.util.validateEmail
+import com.example.shoppingapptechwarriorsteam.util.validatePassword
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel

@@ -1,4 +1,4 @@
-package com.example.shoppingapptechwarriorsteam.activities.data
+package com.example.shoppingapptechwarriorsteam.data
 
 data class User(
     val firstName: String,

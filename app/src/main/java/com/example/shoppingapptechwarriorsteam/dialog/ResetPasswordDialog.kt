@@ -1,4 +1,4 @@
-package com.example.shoppingapptechwarriorsteam.activities.dialog
+package com.example.shoppingapptechwarriorsteam.dialog
 
 import android.widget.Button
 import android.widget.EditText
