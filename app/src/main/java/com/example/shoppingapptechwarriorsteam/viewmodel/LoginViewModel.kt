@@ -1,13 +1,12 @@
-package com.example.shoppingapptechwarriorsteam.activities.viewmodel
+package com.example.shoppingapptechwarriorsteam.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.shoppingapptechwarriorsteam.activities.util.Resource
+import com.example.shoppingapptechwarriorsteam.util.Resource
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject

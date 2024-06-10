@@ -1,10 +1,10 @@
-package com.example.shoppingapptechwarriorsteam.activities.viewmodel
+package com.example.shoppingapptechwarriorsteam.viewmodel
 
 import android.content.SharedPreferences
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.shoppingapptechwarriorsteam.R
-import com.example.shoppingapptechwarriorsteam.activities.util.Constants.INTRODUCTION_KEY
+import com.example.shoppingapptechwarriorsteam.util.Constants.INTRODUCTION_KEY
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

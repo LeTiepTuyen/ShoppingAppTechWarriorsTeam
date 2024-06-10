@@ -1,4 +1,4 @@
-package com.example.shoppingapptechwarriorsteam.activities.fragments.loginRegister
+package com.example.shoppingapptechwarriorsteam.fragments.loginRegister
 
 import android.os.Bundle
 import android.view.LayoutInflater
