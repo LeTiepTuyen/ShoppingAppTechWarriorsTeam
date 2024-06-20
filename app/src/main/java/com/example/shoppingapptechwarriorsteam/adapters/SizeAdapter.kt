@@ -24,7 +24,7 @@ class SizeAdapter: RecyclerView.Adapter<SizeAdapter.SizesViewHolder>() {
                 }
             }else{
                 binding.apply {
-                    imageShadow.visibility = View.VISIBLE
+                    imageShadow.visibility = View.INVISIBLE
 
                 }
             }

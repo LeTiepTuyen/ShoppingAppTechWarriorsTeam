@@ -10,24 +10,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.shoppingapptechwarriorsteam.data.Product
 import com.example.shoppingapptechwarriorsteam.databinding.ProductRvItemBinding
+import com.example.shoppingapptechwarriorsteam.helper.getProductPrice
 
 class BestProductsAdapter  : RecyclerView.Adapter<BestProductsAdapter.BestProductsViewHolder>() {
-
 
     inner class BestProductsViewHolder(private val binding: ProductRvItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(product: Product) {
             binding.apply {
-                Glide.with(itemView).load(product.images[0]).into(imgProduct)
-                product.offerPercentage?.let {
-                    val remainingPricePercentage = 1f - it
-                    val priceAfterOffer = remainingPricePercentage * product.price
-                    tvNewPrice.text = "$ ${String.format("%.2f",priceAfterOffer)}"
-                    tvPrice.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
-                }
+                val priceAfterOffer = product.offerPercentage.getProductPrice(product.price)
+                tvNewPrice.text = "$ ${String.format("%.2f", priceAfterOffer)}"
+                tvPrice.paintFlags = tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
                 if (product.offerPercentage == null)
                     tvNewPrice.visibility = View.INVISIBLE
 
+                Glide.with(itemView).load(product.images[0]).into(imgProduct)
                 tvPrice.text = "$ ${product.price}"
                 tvName.text = product.name
             }
@@ -47,10 +44,8 @@ class BestProductsAdapter  : RecyclerView.Adapter<BestProductsAdapter.BestProduc
     }
 
     val differ = AsyncListDiffer(this, diffCallback)
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): BestProductsViewHolder {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BestProductsViewHolder {
         return BestProductsViewHolder(
             ProductRvItemBinding.inflate(
                 LayoutInflater.from(parent.context)
@@ -58,16 +53,18 @@ class BestProductsAdapter  : RecyclerView.Adapter<BestProductsAdapter.BestProduc
         )
     }
 
-    override fun onBindViewHolder(
-        holder: BestProductsViewHolder,
-        position: Int
-    ) {
+    override fun onBindViewHolder(holder: BestProductsViewHolder, position: Int) {
         val product = differ.currentList[position]
         holder.bind(product)
+
+        holder.itemView.setOnClickListener {
+            onClick?.invoke(product)
+        }
     }
 
     override fun getItemCount(): Int {
         return differ.currentList.size
     }
 
+    var onClick: ((Product) -> Unit)? = null
 }
