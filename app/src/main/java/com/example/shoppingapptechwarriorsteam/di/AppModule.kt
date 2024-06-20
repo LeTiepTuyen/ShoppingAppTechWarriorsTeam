@@ -11,6 +11,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 import android.content.Context.MODE_PRIVATE
+import com.example.shoppingapptechwarriorsteam.firebase.FirebaseCommon
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 @Module
@@ -28,4 +30,11 @@ object AppModule {
     fun provideIntroductionSP(
         application: Application
     ) = application.getSharedPreferences(INTRODUCTION_SP, MODE_PRIVATE)
+
+    @Provides
+    @Singleton
+    fun provideFirebaseCommon(
+        firebaseAuth: FirebaseAuth,
+        firestore: FirebaseFirestore
+    ) = FirebaseCommon(firestore, firebaseAuth)
 }

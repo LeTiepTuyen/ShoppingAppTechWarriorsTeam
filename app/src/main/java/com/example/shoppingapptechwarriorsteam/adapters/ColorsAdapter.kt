@@ -24,8 +24,8 @@ class ColorsAdapter : RecyclerView.Adapter<ColorsAdapter.ColorsViewHolder>() {
                     }
                 }else{
                     binding.apply {
-                        imageShadow.visibility = View.VISIBLE
-                        imagePicked.visibility = View.VISIBLE
+                        imageShadow.visibility = View.INVISIBLE
+                        imagePicked.visibility = View.INVISIBLE
                     }
                 }
             }
