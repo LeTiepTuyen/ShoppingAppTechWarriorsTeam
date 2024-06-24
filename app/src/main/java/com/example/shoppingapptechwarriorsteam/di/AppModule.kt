@@ -13,6 +13,7 @@ import javax.inject.Singleton
 import android.content.Context.MODE_PRIVATE
 import com.example.shoppingapptechwarriorsteam.firebase.FirebaseCommon
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
 
 
 @Module
@@ -37,4 +38,8 @@ object AppModule {
         firebaseAuth: FirebaseAuth,
         firestore: FirebaseFirestore
     ) = FirebaseCommon(firestore, firebaseAuth)
+
+    @Provides
+    @Singleton
+    fun provideStorage() = FirebaseStorage.getInstance().reference
 }
