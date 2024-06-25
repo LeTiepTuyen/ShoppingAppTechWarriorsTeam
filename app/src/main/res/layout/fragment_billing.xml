@@ -23,8 +23,8 @@
                 android:layout_height="match_parent">
                 <ImageView
                     android:id="@+id/imageCloseBilling"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/ic_close"
                     android:scaleType="centerInside"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -34,11 +34,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
+                    android:layout_marginStart="30dp"
                     android:fontFamily="@font/poppins_light"
                     android:text="Billing"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="30sp"
                     app:layout_constraintBottom_toBottomOf="@id/imageCloseBilling"
                     app:layout_constraintStart_toStartOf="@id/imageCloseBilling"
                     app:layout_constraintTop_toTopOf="@id/imageCloseBilling" />
