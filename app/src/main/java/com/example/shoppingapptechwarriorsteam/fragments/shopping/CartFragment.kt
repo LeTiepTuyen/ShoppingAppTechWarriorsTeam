@@ -50,6 +50,7 @@ class CartFragment: Fragment(R.layout.fragment_cart){
             }
         }
 
+
         cartAdapter.onProductClick = {
             val b = Bundle().apply { putParcelable("product", it.product) }
             findNavController().navigate(R.id.action_cartFragment_to_productDetailsFragment, b)
@@ -64,7 +65,8 @@ class CartFragment: Fragment(R.layout.fragment_cart){
         }
 
         binding.buttonCheckout.setOnClickListener {
-            val action = CartFragmentDirections.actionCartFragmentToBillingFragment(totalPrice,cartAdapter.differ.currentList.toTypedArray())
+            val action = CartFragmentDirections
+                    .actionCartFragmentToBillingFragment(totalPrice,cartAdapter.differ.currentList.toTypedArray(),true)
             findNavController().navigate(action)
         }
 

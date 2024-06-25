@@ -98,6 +98,9 @@ class UserAccountFragment : Fragment() {
             }
         }
 
+        binding.imageCloseUserAccount.setOnClickListener {
+            findNavController().navigateUp()
+        }
 
 
         binding.buttonSave.setOnClickListener {

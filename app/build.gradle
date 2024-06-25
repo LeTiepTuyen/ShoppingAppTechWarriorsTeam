@@ -73,7 +73,7 @@ dependencies {
     //circular image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-    //viewpager2 indicatior
+    //viewpager2 indicator
 //    implementation 'com.github.vejei:viewpagerindicator:1.0.0-alpha.1'
     implementation 'io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1'
 
@@ -88,4 +88,6 @@ dependencies {
     kapt 'com.google.dagger:hilt-compiler:2.51.1'
     //Firebase
     implementation 'com.google.firebase:firebase-auth:23.0.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.1'
 }
