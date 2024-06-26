@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -21,9 +22,10 @@ import kotlinx.coroutines.withContext
 
 private val TAG = "RegisterFragment"
 @AndroidEntryPoint
-class RegisterFragment: Fragment (){
+class RegisterFragment: Fragment() {
     private lateinit var binding: FragmentRegisterBinding
     private val viewModel by viewModels<RegisterViewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,46 +42,49 @@ class RegisterFragment: Fragment (){
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
         binding.apply {
-            buttonRegister.setOnClickListener{
+            buttonRegister.setOnClickListener {
                 val user = User(
                     edFirstName.text.toString().trim(),
                     edLastName.text.toString().trim(),
                     edEmailRegister.text.toString().trim(),
                 )
                 val password = edPassWordRegis.text.toString()
-                viewModel.createAccountWithEmailAndPassword(user,password)
+                viewModel.createAccountWithEmailAndPassword(user, password)
             }
         }
+
         lifecycleScope.launchWhenStarted {
-            viewModel.register.collect{
-                when(it){
+            viewModel.register.collect {
+                when (it) {
                     is Resource.Loading -> {
                         binding.buttonRegister.startAnimation()
                     }
                     is Resource.Success -> {
-                        Log.d("test",it.data.toString())
                         binding.buttonRegister.revertAnimation()
+                        Toast.makeText(requireContext(), "Register Successful!", Toast.LENGTH_SHORT).show()
+                        findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
                     }
                     is Resource.Error -> {
-                        Log.e(TAG,it.message.toString())
+                        Log.e(TAG, it.message.toString())
                         binding.buttonRegister.revertAnimation()
                     }
                     else -> Unit
                 }
             }
         }
+
         lifecycleScope.launchWhenStarted {
-            viewModel.validation.collect{validation ->
-                if(validation.email is RegisterValidation.Failure){
-                    withContext(Dispatchers.Main){
+            viewModel.validation.collect { validation ->
+                if (validation.email is RegisterValidation.Failure) {
+                    withContext(Dispatchers.Main) {
                         binding.edEmailRegister.apply {
                             requestFocus()
                             error = validation.email.message
                         }
                     }
                 }
-                if(validation.password is RegisterValidation.Failure){
-                    withContext(Dispatchers.Main){
+                if (validation.password is RegisterValidation.Failure) {
+                    withContext(Dispatchers.Main) {
                         binding.edPassWordRegis.apply {
                             requestFocus()
                             error = validation.password.message
